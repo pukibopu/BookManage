@@ -1,4 +1,4 @@
-package com.book.servlet;
+package com.book.servlet.pages;
 
 import com.book.entity.User;
 import com.book.utlis.ThymeleafUtil;
