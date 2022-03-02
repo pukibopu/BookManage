@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface BookService {
     List<Borrow> getBorrowInfo();
+    void returnBook(String id);
 }

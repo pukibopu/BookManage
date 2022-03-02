@@ -308,7 +308,7 @@
                                             <td th:text="${borrow.getStudentName()}">我是学生</td>
                                             <td th:text="'#'+${borrow.getStudentId()}">#1111</td>
                                             <td class="relative">
-                                                <a class="action-btn " href="#">
+                                                <a class="action-btn " th:href="'return-book?id='+${borrow.getId()}">
                                                     <svg class="default-size " viewbox="0 0 341.333 341.333 ">
                                                         <g>
                                                             <g>

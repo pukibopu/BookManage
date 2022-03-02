@@ -16,4 +16,12 @@ public class BookServiceImpl implements BookService {
             return mapper.getBorrowInfo();
         }
     }
+
+    @Override
+    public void returnBook(String id) {
+        try(SqlSession session=MybatisUtil.getSession(true)){
+            BookMapper mapper=session.getMapper(BookMapper.class);
+            mapper.deleteBorrow(id);
+        }
+    }
 }
