@@ -131,23 +131,23 @@
                                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                 <div class="form-group">
                                                     <label for="region" class="col-form-label">书籍</label>
-                                                    <select class="select2 form-control" id="region">
-                                                        <option value="HI">Hawaii</option>
+                                                    <select class="select2 form-control" id="region" name="book">
+                                                        <option th:value="${book.getBid()}" th:each="book:${book_list}" th:text="${book.getTitle()}" >Hawaii</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                                                 <div class="form-group">
                                                     <label for="city" class="col-form-label">学生</label>
-                                                    <select class="select2 form-control" id="city">
-                                                        <option value="AK">Alaska</option>
+                                                    <select class="select2 form-control" id="city" name="student">
+                                                        <option th:each="student : ${student_list}" th:value="${student.getSid()}" th:text="${student.getName()}">Alaska</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <hr class="mt-4 mb-4">
                                         <div class="form-group mb-0">
-                                            <button class="btn btn-primary" type="button">提交</button>
+                                            <button class="btn btn-primary" type="submit">提交</button>
 
                                         </div>
                                     </div>
